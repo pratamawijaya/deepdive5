@@ -2,19 +2,24 @@ package id.pratama.deepdiveweek5
 
 import android.content.Intent
 import android.graphics.Color
+import android.media.Image
 import android.os.Bundle
 import android.text.Spannable
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var textViewTNC: TextView
     lateinit var btnLogin: Button
-
+    lateinit var imgIcon: ImageView
+    lateinit var inputFullName: TextInputEditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +29,12 @@ class MainActivity : AppCompatActivity() {
 
         textViewTNC = findViewById(R.id.labelTNC)
         btnLogin = findViewById(R.id.btnLogin)
+        imgIcon = findViewById(R.id.icon)
+        inputFullName = findViewById(R.id.inputFullname)
+
+        imgIcon.setOnClickListener {
+
+        }
 
         val target = "terms"
         val targetCondition = "condition"

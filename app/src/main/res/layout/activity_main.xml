@@ -26,15 +26,23 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvLabel" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/inputFullname"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/containerFullName"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Full name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icon" />
+        app:layout_constraintTop_toBottomOf="@id/icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputFullname"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Full name" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/inputEmail"
@@ -44,7 +52,7 @@
         android:hint="Email"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputFullname" />
+        app:layout_constraintTop_toBottomOf="@id/containerFullName" />
 
     <LinearLayout
         android:id="@+id/containerTNC"
